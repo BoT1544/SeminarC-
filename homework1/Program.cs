@@ -64,3 +64,17 @@ else
     Console.WriteLine("No :(");
 }
 */
+
+// Задача 4: напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+Console.Write("Ipmut number ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+int current = 1;
+
+while(current <= N)
+{
+    if(current % 2 == 0)
+Console.Write(current + " ");
+current++;
+}
