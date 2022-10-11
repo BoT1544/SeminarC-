@@ -23,13 +23,15 @@ Console.WriteLine($"SecondDigit of {number} is {SecondDigit}");
 /*
 int FindThirdDigit(int num)
 {
-    //string text = Convert.ToString(FindThirdDigit);
     if(num < 100)
       return 0;
     else
     {
-        int del = num % 10;
-        return del;
+        while(num >= 999)
+        {
+            num = num / 10;
+        }
+            return num % 10;
     }
 }
 
@@ -43,8 +45,8 @@ else
     Console.Write($"Not find third digit!");
 */
 
-// Задача 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
+// Задача 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
 bool week(int num)
 {
@@ -54,10 +56,10 @@ bool week(int num)
         return true;
 }
 
-Console.WriteLine("it's a holiday?");
+Console.WriteLine("it's a day off?");
 Console.Write("Please input day of the week ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 bool day = week(number);
-Console.Write($"it's a {day}");
+Console.Write($"{day} it's a day off ! )");
 */
