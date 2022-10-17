@@ -94,7 +94,7 @@ bool(num < 100)
 // int c1 = num % 100;
 // int d = c1 / 10;      //Находит предпоследнию цифру
 
-
+/*
 double FindDistans3D(double x, double y, double z, double x1, double y1, double z1)
 {
     double num = 0;
@@ -123,3 +123,5 @@ double z1 = Convert.ToDouble(Console.ReadLine());
 
 double distans = FindDistans3D(x, y, z, x1, y1, z1);
 Console.WriteLine($"Distance between points A and B is {distans}");
+*/
+
