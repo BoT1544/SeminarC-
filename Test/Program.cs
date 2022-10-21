@@ -125,3 +125,90 @@ double distans = FindDistans3D(x, y, z, x1, y1, z1);
 Console.WriteLine($"Distance between points A and B is {distans}");
 */
 
+double[] CreateRandomArray(int size, int minVal, int maxVal) 
+{
+    double[] array = new double[size];
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = Math.Round(minVal + new Random().NextDouble() * (maxVal - minVal),2);  //"Эта срочка кода работает, но в её коректности есть большие сомнения
+    }
+
+    return array;
+}
+
+void showArray(double[] array)
+{
+    for(int i =0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+
+    Console.WriteLine();
+}
+
+double DifferenceMinMax(double[] array)
+{
+  int min = 0;
+  int max = 0;
+  double dif = 0;
+
+  for(int i = 1; i < array.Length; i++)
+  {
+    if(array[i] > array[max])
+      max = i;
+    if(array[i] < array[min])
+      min = i;
+  }
+  Console.WriteLine($"min: ({array[min]}) max: ({array[max]})");
+  dif = array[max] - array[min];
+  return dif;
+}
+
+Console.Write("Input a number of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input a min possible valie: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input a max possible valie: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+double[] myArray = CreateRandomArray(size, min, max);
+showArray(myArray);
+
+double result = Math.Round(DifferenceMinMax(myArray),2);
+Console.WriteLine($"Difference is: {result}");
+
+/*
+int DifferenceMinMax(int[] array)
+{
+  int min = 0;
+  int max = 0;
+  int dif = 0;
+
+  for(int i = 1; i < array.Length; i++)
+  {
+    if(array[i] > array[max])
+      max = i;
+    if(array[i] < array[min])
+      min = i;
+  }
+  Console.WriteLine($"min: ({array[min]}) max: ({array[max]})");
+  dif = array[max] - array[min];
+  return dif;
+}
+
+Console.Write("Input a number of elements: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input a min possible valie: ");
+int min = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input a max possible valie: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] myArray = CreateRandomArray(size, min, max);
+showArray(myArray);
+
+int result = DifferenceMinMax(myArray);
+Console.WriteLine($"Difference is: {result}");
+*/
