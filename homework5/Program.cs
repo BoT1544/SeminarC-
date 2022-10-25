@@ -1,5 +1,5 @@
 ﻿// Задача 1. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
-
+/*
 int[] CreateRandomArray(int size, int minVal, int maxVal) 
 {
   int[] array = new int[size];
@@ -19,6 +19,7 @@ void showArray(int[] array)
 
     Console.WriteLine();
 }
+*/
 /*
 int EvenArrayNumbers(int[] array)
 {
